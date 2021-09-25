@@ -1,0 +1,80 @@
+<body onkeydown="move()" onkeyup="stopMovement()" style="background: black;">
+</body>
+<noscript>Your browser doesn't seem to support JavaScript. Please use a browser that has JavaScript support.</noscript>
+<canvas id="gameArea" width="1100" height="630"
+style="border: none;">
+You seem to have a pretty old browser. Upgrade to a newer one and try running this game again.
+</canvas>
+<!--Import images/sprites as hidden images (audio can be retrieved directly from the audio file directory)-->
+<img id="img1" src="char/front.png" hidden>
+<img id="img1-1" src="char/front-2.png" hidden>
+<img id="img2" src="char/right.png" hidden>
+<img id="img3" src="char/left.png" hidden>
+<img id="img4" src="char/back.png" hidden>
+<img id="tile1" src="tiles/tile1.png" hidden>
+<img id="tile2" src="tiles/tile2.png" hidden>
+<img id="tile3" src="tiles/tile3.png" hidden>
+<img id="tile4" src="tiles/tile4.png" hidden>
+<img id="tile5" src="tiles/tile5.png" hidden>
+<img id="recycle" src="tiles/recycle.png" hidden>
+<img id="a" src="font/a.png" hidden>
+<img id="b" src="font/b.png" hidden>
+<img id="c" src="font/c.png" hidden>
+<img id="d" src="font/d.png" hidden>
+<img id="e" src="font/e.png" hidden>
+<img id="f" src="font/f.png" hidden>
+<img id="g" src="font/g.png" hidden>
+<img id="box" src="box.png" hidden>
+<img id="box2" src="box2.png" hidden>
+<img id="box3" src="box3.png" hidden>
+<img id="blank" src="font/blank.png" hidden>
+<img id="entity" src="room0-entity.png" hidden>
+<img id="screen1" src="startscreen/screen1.png" hidden>
+<img id="screen2" src="startscreen/screen2.png" hidden>
+<img id="menu" src="menubg.png" hidden>
+<img id="slime1" src="NPC-1/slime.png" hidden>
+<img id="slime2" src="NPC-1/slime-2.png" hidden>
+<img id="hitbox" src="hitbox.png" hidden>
+<style>
+  body { 
+    margin: 0em
+    }
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100;
+    height: 100;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+</style>
+<script src="index.js"></script>
+<script>
+
+setInterval(resize, 1)
+function resize() {
+ w = window.innerWidth;
+ h = window.innerHeight
+ if(h > w * (630/1100)) {
+ document.getElementById("gameArea").style.height = w * (630/1100)
+ document.getElementById("gameArea").style.width = w
+
+}
+else { 
+   document.getElementById("gameArea").style.height = h
+ document.getElementById("gameArea").style.width = h * (1100/630)
+}
+
+
+
+
+}
+</script>
